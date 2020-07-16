@@ -1,0 +1,11 @@
+{
+    "name": "community_sync",
+    "modifications": {
+        "replaceFile": [
+            {
+                "name": "dependencias.json",
+                "path": "config/"
+            }
+        ]
+    }
+}
