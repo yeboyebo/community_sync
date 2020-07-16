@@ -1,0 +1,10 @@
+{
+  "dependencias": [
+    {
+      "key": "flsyncppal",
+      "version": "v1.0"
+    }
+  ],
+  "fk": false,
+  "fun_aq": null
+}
