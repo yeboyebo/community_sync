@@ -1,6 +1,15 @@
 {
     "name": "community_sync",
     "modifications": {
+        "addFile": [
+            {
+                "name": "app_sync__tasks.py",
+                "path": "apps/sync/"
+            }
+        ],
+        "patchJson": [],
+        "deleteFile": [],
+        "patchScript": [],
         "replaceFile": [
             {
                 "name": "dependencias.json",
