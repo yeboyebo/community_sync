@@ -1,5 +1,5 @@
 from controllers.base.default.controllers.recieve_sync import RecieveSync
-from controllers.api.b2c.orders.serializers.cm_orders_serializer import CmB2COrdersSerializer
+from controllers.api.community.orders.serializers.cm_orders_serializer import CmB2COrdersSerializer
 from models.flfact_tpv.objects.eg_logpedidosweb_raw import EgLogPedidoWeb
 
 
