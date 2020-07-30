@@ -1,10 +1,18 @@
 {
   "dependencias": [
     {
+        "key": "flfacturac",
+        "version": "v1.0"
+    },
+    {
+        "key": "flfact_tpv",
+        "version": "v1.0"
+    },
+    {
       "key": "flsyncppal",
       "version": "v1.0"
     }
   ],
   "fk": false,
-  "fun_aq": null
+  "fun_aq": "fun_elganso_ctr"
 }
