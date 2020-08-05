@@ -1,5 +1,5 @@
 from controllers.base.default.controllers.recieve_sync import RecieveSync
-from controllers.api.community.orders.serializers.cm_orders_serializer import CmB2COrdersSerializer
+from controllers.api.community.orders.serializers.cm_log_serializer import CmB2CLogSerializer
 from models.flfact_tpv.objects.eg_logpedidosweb_raw import EgLogPedidoWeb
 
 
@@ -31,7 +31,7 @@ class CmB2COrdersPost(RecieveSync):
         return {"data": {"log": self.logs}, "status": 200}
 
     def get_serializer(self):
-        return CmB2COrdersSerializer()
+        return CmB2CLogSerializer()
 
     def create_model(self, data):
         return EgLogPedidoWeb(data)
