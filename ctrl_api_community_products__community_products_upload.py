@@ -1,12 +1,10 @@
 import json
-from abc import ABC
 
 from YBLEGACY import qsatype
 
 from controllers.base.magento2.products.controllers.products_upload import ProductsUpload
 from controllers.api.community.products.serializers.configurable_product_serializer import ConfigurableProductSerializer
 from controllers.api.community.products.serializers.simple_product_serializer import SimpleProductSerializer
-from controllers.base.magento2.products.serializers.product_link_serializer import ProductLinkSerializer
 
 
 class communityProductsUpload(ProductsUpload):
@@ -44,7 +42,6 @@ class communityProductsUpload(ProductsUpload):
         if not q.size():
             return body
 
-
         body = self.fetch_query(q)
         self.idsincro = body[0]["lsc.idsincro"]
         self.referencia = body[0]["lsc.idobjeto"]
@@ -56,7 +53,6 @@ class communityProductsUpload(ProductsUpload):
 
         return body
 
-   
     def get_configurable_product_serializer(self):
         return ConfigurableProductSerializer()
 
@@ -97,7 +93,7 @@ class communityProductsUpload(ProductsUpload):
 
         if not lineas_no_sincro:
             qsatype.FLSqlQuery().execSql("UPDATE sincro_catalogo SET ptesincro = FALSE WHERE idsincro = '{}'".format(self.idsincro))
- 
+
         self.log("Éxito", "Productos sincronizados correctamente (referencia: {})".format(self.referencia))
 
         return self.small_sleep

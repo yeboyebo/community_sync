@@ -22,7 +22,7 @@ class SimpleProductSerializer(DefaultSerializer):
         self.set_string_value("product//status", "1")
 
         is_visibility = "1"
-        if  self.get_init_value("aa.talla") == "TU":
+        if self.get_init_value("aa.talla") == "TU":
             is_visibility = "4"
 
         self.set_string_value("product//visibility", is_visibility)
@@ -37,12 +37,12 @@ class SimpleProductSerializer(DefaultSerializer):
         self.set_string_value("product//extension_attributes//stock_item//is_in_stock", is_in_stock)
 
         large_description = self.get_init_value("a.mgdescripcion")
-        if large_description == False or large_description == "" or large_description == None or str(large_description) == "None":
+        if large_description is False or large_description == "" or large_description is None or str(large_description) == "None":
             large_description = self.get_init_value("lsc.descripcion")
 
         short_description = self.get_init_value("a.mgdescripcioncorta")
 
-        if short_description == False or short_description == "" or short_description == None or str(short_description) == "None":
+        if short_description is False or short_description == "" or short_description is None or str(short_description) == "None":
             short_description = self.get_init_value("lsc.descripcion")
 
         custom_attributes = [
@@ -75,21 +75,20 @@ class SimpleProductSerializer(DefaultSerializer):
         return disponible
 
     def get_serializador_store(self):
-        
         self.set_string_value("product//sku", self.get_sku())
 
         desc_store = qsatype.FLUtil.sqlSelect("traducciones", "traduccion", "campo = 'descripcion' AND codidioma = '" + self.get_init_value("store_id") + "' AND idcampo = '{}'".format(self.get_init_value("lsc.idobjeto")))
 
-        large_description_store =  qsatype.FLUtil.sqlSelect("traducciones", "traduccion", "campo = 'mgdescripcion' AND codidioma = '" + self.get_init_value("store_id") + "' AND idcampo = '{}'".format(self.get_init_value("lsc.idobjeto")))
+        large_description_store = qsatype.FLUtil.sqlSelect("traducciones", "traduccion", "campo = 'mgdescripcion' AND codidioma = '" + self.get_init_value("store_id") + "' AND idcampo = '{}'".format(self.get_init_value("lsc.idobjeto")))
 
-        if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store == None:
+        if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store is None:
             desc_store = self.get_init_value("a.mgdescripcioncorta")
-            if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store == None:
+            if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store is None:
                 desc_store = self.get_init_value("lsc.descripcion")
 
-        if large_description_store == False or large_description_store == "" or large_description_store == None or str(large_description_store) == "None":
+        if large_description_store is False or large_description_store == "" or large_description_store is None or str(large_description_store) == "None":
             large_description_store = self.get_init_value("a.mgdescripcion")
-            if large_description_store == False or large_description_store == "" or large_description_store == None or str(large_description_store) == "None":
+            if large_description_store is False or large_description_store == "" or large_description_store is None or str(large_description_store) == "None":
                 large_description_store = self.get_init_value("lsc.descripcion")
 
         self.set_string_value("product//name", desc_store)
@@ -104,15 +103,14 @@ class SimpleProductSerializer(DefaultSerializer):
         return True
 
     def get_serializador_store_es(self):
-        
         self.set_string_value("product//sku", self.get_sku())
 
         desc_store = self.get_init_value("a.mgdescripcioncorta")
-        if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store == None:
+        if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store is None:
             desc_store = self.get_init_value("lsc.descripcion")
 
         large_description_store = self.get_init_value("a.mgdescripcion")
-        if large_description_store == False or large_description_store == "" or large_description_store == None or str(large_description_store) == "None":
+        if large_description_store is False or large_description_store == "" or large_description_store is None or str(large_description_store) == "None":
             large_description_store = self.get_init_value("lsc.descripcion")
 
         self.set_string_value("product//name", desc_store)

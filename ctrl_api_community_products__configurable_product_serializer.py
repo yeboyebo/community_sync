@@ -24,12 +24,12 @@ class ConfigurableProductSerializer(DefaultSerializer):
         self.set_string_value("product//type_id", "configurable")
 
         large_description = self.get_init_value("a.mgdescripcion")
-        if large_description == False or large_description == "" or large_description == None or str(large_description) == "None":
+        if large_description is False or large_description == "" or large_description is None or str(large_description) == "None":
             large_description = self.get_init_value("lsc.descripcion")
 
         short_description = self.get_init_value("a.mgdescripcioncorta")
 
-        if short_description == False or short_description == "" or short_description == None or str(short_description) == "None":
+        if short_description is False or short_description == "" or short_description is None or str(short_description) == "None":
             short_description = self.get_init_value("lsc.descripcion")
 
         custom_attributes = [
@@ -54,18 +54,17 @@ class ConfigurableProductSerializer(DefaultSerializer):
         return True
 
     def get_serializador_store(self):
-        
         desc_store = qsatype.FLUtil.sqlSelect("traducciones", "traduccion", "campo = 'descripcion' AND codidioma = '" + self.get_init_value("store_id") + "' AND idcampo = '{}'".format(self.get_init_value("lsc.idobjeto")))
-        large_description_store =  qsatype.FLUtil.sqlSelect("traducciones", "traduccion", "campo = 'mgdescripcion' AND codidioma = '" + self.get_init_value("store_id") + "' AND idcampo = '{}'".format(self.get_init_value("lsc.idobjeto")))
+        large_description_store = qsatype.FLUtil.sqlSelect("traducciones", "traduccion", "campo = 'mgdescripcion' AND codidioma = '" + self.get_init_value("store_id") + "' AND idcampo = '{}'".format(self.get_init_value("lsc.idobjeto")))
 
-        if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store == None:
+        if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store is None:
             desc_store = self.get_init_value("a.mgdescripcioncorta")
-            if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store == None:
+            if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store is None:
                 desc_store = self.get_init_value("lsc.descripcion")
 
-        if large_description_store == False or large_description_store == "" or large_description_store == None or str(large_description_store) == "None":
+        if large_description_store is False or large_description_store == "" or large_description_store is None or str(large_description_store) == "None":
             large_description_store = self.get_init_value("a.mgdescripcion")
-            if large_description_store == False or large_description_store == "" or large_description_store == None or str(large_description_store) == "None":
+            if large_description_store is False or large_description_store == "" or large_description_store is None or str(large_description_store) == "None":
                 large_description_store = self.get_init_value("lsc.descripcion")
 
         self.set_string_relation("product//sku", "lsc.idobjeto")
@@ -82,13 +81,12 @@ class ConfigurableProductSerializer(DefaultSerializer):
         return True
 
     def get_serializador_store_es(self):
-        
         desc_store = self.get_init_value("a.mgdescripcioncorta")
-        if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store == None:
+        if not desc_store or desc_store == "" or str(desc_store) == "None" or desc_store is None:
             desc_store = self.get_init_value("lsc.descripcion")
 
         large_description_store = self.get_init_value("a.mgdescripcion")
-        if large_description_store == False or large_description_store == "" or large_description_store == None or str(large_description_store) == "None":
+        if large_description_store is False or large_description_store == "" or large_description_store is None or str(large_description_store) == "None":
             large_description_store = self.get_init_value("lsc.descripcion")
 
         self.set_string_relation("product//sku", "lsc.idobjeto")
