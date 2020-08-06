@@ -125,6 +125,14 @@
             {
                 "name": "model_flfact_tpv__egidlecommercedevoluciones_raw.py",
                 "path": "models/flfact_tpv/objects/"
+            },
+            {
+                "name": "ctrl_api_community_orders__process.py",
+                "path": "controllers/api/community/orders/"
+            },
+            {
+                "name": "ctrl_api_community_products__upload.py",
+                "path": "controllers/api/community/products/"
             }
         ],
         "patchJson": [
