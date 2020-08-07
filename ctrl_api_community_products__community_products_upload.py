@@ -67,7 +67,6 @@ class communityProductsUpload(ProductsUpload):
             self.send_request("post", url=product_url.format("all"), data=json.dumps(data["configurable_product_default"]))
         if data["configurable_product_es"]:
             self.send_request("post", url=product_url.format("es"), data=json.dumps(data["configurable_product_es"]))
-
         if data["configurable_product_en"]:
             self.send_request("post", url=product_url.format("en"), data=json.dumps(data["configurable_product_en"]))
 
@@ -77,7 +76,6 @@ class communityProductsUpload(ProductsUpload):
         if data["simple_products_es"]:
             for simple_product in data["simple_products_es"]:
                 self.send_request("post", url=product_url.format("es"), data=json.dumps(simple_product))
-
         if data["simple_products_en"]:
             for simple_product in data["simple_products_en"]:
                 self.send_request("post", url=product_url.format("en"), data=json.dumps(simple_product))
