@@ -79,7 +79,7 @@ class CmDiscountLineSerializer(CmOrderLineSerializer):
         if descripcion_bono:
             dto = qsatype.FLUtil.sqlSelect("eg_movibono", "importe", "codbono = '{}' AND venta = '{}'".format(codbono, self.init_data["codcomanda"]))
 
-            if self.init_data["codcomanda"][:4] == "WEB7":
+            if self.init_data["codcomanda"][:4] == "WEC7":
                 dto = dto / 0.8
 
             self.bono = {

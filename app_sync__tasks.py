@@ -1,6 +1,7 @@
 from YBUTILS import globalValues
 
 from controllers.base.default.managers.task_manager import TaskManager
+from controllers.base.magento.drivers.magento import MagentoDriver
 
 from controllers.api.community.orders.controllers.cm_orders_post import CmB2COrdersPost
 from controllers.api.community.orders.controllers.cm_orders_process import CmB2COrdersProcess
@@ -11,7 +12,8 @@ sync_object_dict = {
         "sync_object": CmB2COrdersPost
     },
     "b2c_orders_process": {
-        "sync_object": CmB2COrdersProcess
+        "sync_object": CmB2COrdersProcess,
+        "driver": MagentoDriver
     },
     "products_community_upload": {
         "sync_object": communityProducts

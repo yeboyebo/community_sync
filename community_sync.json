@@ -133,6 +133,14 @@
             {
                 "name": "ctrl_api_community_products__upload.py",
                 "path": "controllers/api/community/products/"
+            },
+            {
+                "name": "model_flfact_tpv__tpv_fechasincrotienda.py",
+                "path": "models/flfact_tpv/"
+            },
+            {
+                "name": "model_flfact_tpv__tpv_fechasincrotienda_def.py",
+                "path": "models/flfact_tpv/"
             }
         ],
         "patchJson": [

@@ -36,15 +36,16 @@ class CmB2COrdersProcess(DownloadSync):
                 self.idlogs = str(row['idlog'])
             else:
                 self.idlogs += "," + str(row['idlog'])
-            cuerpolog = str(row['cuerpolog']).replace("None,", "\"None\",")
-            cuerpolog = str(cuerpolog).replace("'", "\"")
+
+            cuerpolog = row['cuerpolog']
+            cuerpolog = cuerpolog.replace("None", "\"None\"")
+            cuerpolog = cuerpolog.replace("'", "\"")
             datajson = json.loads(str(cuerpolog))
             aData.append(datajson)
 
         return aData
 
     def process_data(self, data):
-
         order_data = CmB2COrdersSerializer().serialize(data)
         if not order_data:
             return

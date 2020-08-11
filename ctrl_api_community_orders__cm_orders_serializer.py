@@ -18,7 +18,7 @@ class CmB2COrdersSerializer(DefaultSerializer):
     def get_data(self):
         increment = str(self.init_data["increment_id"])
 
-        codigo = "WEB{}".format(qsatype.FactoriaModulos.get("flfactppal").iface.cerosIzquierda(increment, 9))
+        codigo = "WEC{}".format(qsatype.FactoriaModulos.get("flfactppal").iface.cerosIzquierda(increment, 9))
 
         if qsatype.FLUtil.sqlSelect("tpv_comandas", "idtpv_comanda", "codigo = '{}'".format(codigo)):
             return False
