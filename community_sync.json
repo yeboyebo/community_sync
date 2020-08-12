@@ -149,6 +149,14 @@
             {
                 "name": "model_flfactalma__movistock_def.py",
                 "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__mg_datosenviocomanda.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__mg_datosenviocomanda_def.py",
+                "path": "models/flfactalma/"
             }
         ],
         "patchJson": [

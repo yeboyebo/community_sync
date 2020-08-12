@@ -16,6 +16,13 @@
         },
         {
             "type": "insertAfterNode",
+            "path": "/models/flfactalma/movistock",
+            "value": {
+                "mg_datosenviocomanda": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
             "path": "/models/flfactppal/zonasgeo",
             "value": {
                 "eg_logpedidosweb": null
