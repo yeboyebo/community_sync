@@ -42,10 +42,11 @@ class CmOrderLineSerializer(DefaultSerializer):
         self.set_data_relation("pvpunitarioiva", "pvpunitarioiva")
         self.set_data_relation("pvpsindtoiva", "pvpsindtoiva")
         self.set_data_relation("pvptotaliva", "pvptotaliva")
-        print("//////////////almacen: ", str(self.init_data["almacen"]))
-        if str(self.init_data["almacen"]) != "AWEB":
-            linea_ecommerce_excluida = CmLineaEcommerceExcluidaSerializer().serialize(self.init_data)
-            self.data["children"]["lineaecommerceexcluida"] = linea_ecommerce_excluida
+
+        #print("//////////////almacen: ", str(self.init_data["almacen"]))
+        #if str(self.init_data["almacen"]) != "AWEB":
+        #    linea_ecommerce_excluida = CmLineaEcommerceExcluidaSerializer().serialize(self.init_data)
+        #    self.data["children"]["lineaecommerceexcluida"] = linea_ecommerce_excluida
 
         return True
 

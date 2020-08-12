@@ -11,6 +11,13 @@
         },
         {
             "type": "insertAfterNode",
+            "path": "/flfactalma/stocks",
+            "value": {
+                "movistock": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
             "path": "/flfactppal/usuarios",
             "value": {
                 "eg_logpedidosweb": null

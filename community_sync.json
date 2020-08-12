@@ -141,6 +141,14 @@
             {
                 "name": "model_flfact_tpv__tpv_fechasincrotienda_def.py",
                 "path": "models/flfact_tpv/"
+            },
+            {
+                "name": "model_flfactalma__movistock.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__movistock_def.py",
+                "path": "models/flfactalma/"
             }
         ],
         "patchJson": [
