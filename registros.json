@@ -18,6 +18,13 @@
         },
         {
             "type": "insertAfterNode",
+            "path": "/flfact_tpv/mg_datosenviocomanda",
+            "value": {
+                "idl_ecommerce": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
             "path": "/flfactalma/stocks",
             "value": {
                 "movistock": null

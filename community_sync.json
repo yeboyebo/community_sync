@@ -165,6 +165,14 @@
             {
                 "name": "model_flfact_tpv__mg_datosenviocomanda_def.py",
                 "path": "models/flfact_tpv/"
+            },
+            {
+                "name": "model_flfact_tpv__idl_ecommerce.py",
+                "path": "models/flfact_tpv/"
+            },
+            {
+                "name": "model_flfact_tpv__idl_ecommerce_def.py",
+                "path": "models/flfact_tpv/"
             }
         ],
         "patchJson": [
