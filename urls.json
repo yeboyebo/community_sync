@@ -9,16 +9,16 @@
         },
         {
             "type": "insertAfterNode",
-            "path": "/models/flfactalma/lineasregstocks",
+            "path": "/models/flfact_tpv/tpv_fechasincrotienda",
             "value": {
-                "movistock": null
+                "mg_datosenviocomanda": null
             }
         },
         {
             "type": "insertAfterNode",
-            "path": "/models/flfactalma/movistock",
+            "path": "/models/flfactalma/lineasregstocks",
             "value": {
-                "mg_datosenviocomanda": null
+                "movistock": null
             }
         },
         {

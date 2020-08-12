@@ -157,6 +157,14 @@
             {
                 "name": "model_flfactalma__mg_datosenviocomanda_def.py",
                 "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfact_tpv__mg_datosenviocomanda.py",
+                "path": "models/flfact_tpv/"
+            },
+            {
+                "name": "model_flfact_tpv__mg_datosenviocomanda_def.py",
+                "path": "models/flfact_tpv/"
             }
         ],
         "patchJson": [
