@@ -35,7 +35,8 @@ class ConfigurableProductSerializer(DefaultSerializer):
         custom_attributes = [
             {"attribute_code": "description", "value": large_description},
             {"attribute_code": "short_description", "value": short_description},
-            {"attribute_code": "tax_class_id", "value": "1"}
+            {"attribute_code": "seller_id", "value": self.get_init_value("av.idvendedormagento")},
+            {"attribute_code": "tax_class_id", "value": "2"}
         ]
 
         size_values = [{"value_index": size} for size in self.get_init_value("indice_tallas")]

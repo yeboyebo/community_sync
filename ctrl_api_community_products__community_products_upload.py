@@ -33,9 +33,9 @@ class communityProductsUpload(ProductsUpload):
         self.idlinea = idlinea
 
         q = qsatype.FLSqlQuery()
-        q.setSelect("lsc.id, lsc.idsincro, lsc.idobjeto, lsc.descripcion, a.pvp, a.peso, aa.barcode, aa.talla, s.disponible, t.indicecommunity, a.mgdescripcion, a.mgdescripcioncorta")
-        q.setFrom("lineassincro_catalogo lsc INNER JOIN articulos a ON lsc.idobjeto = a.referencia INNER JOIN atributosarticulos aa ON a.referencia = aa.referencia LEFT JOIN stocks s ON aa.barcode = s.barcode INNER JOIN indicessincrocatalogo t ON aa.talla = t.valor")
-        q.setWhere("lsc.id = {} GROUP BY lsc.id, lsc.idsincro, lsc.idobjeto, lsc.descripcion, a.pvp, a.peso, aa.barcode, aa.talla, s.disponible, t.indicecommunity, a.mgdescripcion, a.mgdescripcioncorta".format(self.idlinea))
+        q.setSelect("lsc.id, lsc.idsincro, lsc.idobjeto, lsc.descripcion, a.pvp, a.peso, aa.barcode, aa.talla, s.disponible, t.indicecommunity, a.mgdescripcion, a.mgdescripcioncorta, av.idvendedormagento")
+        q.setFrom("lineassincro_catalogo lsc INNER JOIN articulos a ON lsc.idobjeto = a.referencia INNER JOIN atributosarticulos aa ON a.referencia = aa.referencia LEFT JOIN stocks s ON aa.barcode = s.barcode INNER JOIN indicessincrocatalogo t ON aa.talla = t.valor INNER JOIN articulos_vendedor av ON a.referencia = av.referencia")
+        q.setWhere("lsc.id = {} GROUP BY lsc.id, lsc.idsincro, lsc.idobjeto, lsc.descripcion, a.pvp, a.peso, aa.barcode, aa.talla, s.disponible, t.indicecommunity, a.mgdescripcion, a.mgdescripcioncorta, av.idvendedormagento".format(self.idlinea))
 
         q.exec_()
 
@@ -62,20 +62,23 @@ class communityProductsUpload(ProductsUpload):
     def send_data(self, data):
         product_url = self.product_url if self.driver.in_production else self.product_test_url
         link_url = self.link_url if self.driver.in_production else self.link_test_url
-
         if data["configurable_product_default"]:
             self.send_request("post", url=product_url.format("all"), data=json.dumps(data["configurable_product_default"]))
+        
         if data["configurable_product_es"]:
             self.send_request("post", url=product_url.format("es"), data=json.dumps(data["configurable_product_es"]))
+
         if data["configurable_product_en"]:
             self.send_request("post", url=product_url.format("en"), data=json.dumps(data["configurable_product_en"]))
 
         if data["simple_products_default"]:
             for simple_product in data["simple_products_default"]:
                 self.send_request("post", url=product_url.format("all"), data=json.dumps(simple_product))
+
         if data["simple_products_es"]:
             for simple_product in data["simple_products_es"]:
                 self.send_request("post", url=product_url.format("es"), data=json.dumps(simple_product))
+
         if data["simple_products_en"]:
             for simple_product in data["simple_products_en"]:
                 self.send_request("post", url=product_url.format("en"), data=json.dumps(simple_product))

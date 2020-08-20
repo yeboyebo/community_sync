@@ -48,8 +48,9 @@ class SimpleProductSerializer(DefaultSerializer):
         custom_attributes = [
             {"attribute_code": "description", "value": large_description},
             {"attribute_code": "short_description", "value": short_description},
-            {"attribute_code": "tax_class_id", "value": "1"},
+            {"attribute_code": "tax_class_id", "value": "2"},
             {"attribute_code": "barcode", "value": self.get_init_value("aa.barcode")},
+            {"attribute_code": "seller_id", "value": self.get_init_value("av.idvendedormagento")},
             {"attribute_code": "size", "value": self.get_init_value("t.indicecommunity")}
         ]
 
