@@ -25,6 +25,13 @@
         },
         {
             "type": "insertAfterNode",
+            "path": "/flfact_tpv/idl_ecommerce",
+            "value": {
+                "tpv_tarjetaspuntos": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
             "path": "/flfactalma/stocks",
             "value": {
                 "movistock": null

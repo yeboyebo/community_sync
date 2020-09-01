@@ -173,6 +173,14 @@
             {
                 "name": "model_flfact_tpv__idl_ecommerce_def.py",
                 "path": "models/flfact_tpv/"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__tpv_tarjetaspuntos.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__tpv_tarjetaspuntos_def.py"
             }
         ],
         "patchJson": [
