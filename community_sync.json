@@ -181,6 +181,46 @@
             {
                 "path": "models/flfact_tpv/",
                 "name": "model_flfact_tpv__tpv_tarjetaspuntos_def.py"
+            },
+            {
+                "path": "controllers/api/community/points/",
+                "name": "ctrl_api_community_points__post.py"
+            },
+            {
+                "path": "controllers/api/community/points/",
+                "name": "ctrl_api_community_points__process.py"
+            },
+            {
+                "path": "controllers/api/community/points/controllers/",
+                "name": "ctrl_api_community_points__cm_points_post.py"
+            },
+            {
+                "path": "controllers/api/community/points/controllers/",
+                "name": "ctrl_api_community_points__cm_points_process.py"
+            },
+            {
+                "path": "controllers/api/community/points/serializers/",
+                "name": "ctrl_api_community_points__cm_log_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/points/serializers/",
+                "name": "ctrl_api_community_points__cm_points_serializer.py"
+            },
+            {
+                "path": "models/flfact_tpv/objects/",
+                "name": "model_flfact_tpv__cm_points_raw.py"
+            },
+            {
+                "path": "models/flfact_tpv/objects/",
+                "name": "model_flfact_tpv__eg_logtarjetasweb_raw.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__eg_logtarjetasweb.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__eg_logtarjetasweb_def.py"
             }
         ],
         "patchJson": [

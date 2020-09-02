@@ -41,6 +41,13 @@
             "value": {
                 "eg_logpedidosweb": null
             }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactppal/eg_logpedidosweb",
+            "value": {
+                "eg_logtarjetasweb": null
+            }
         }
     ]
 }

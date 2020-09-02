@@ -6,6 +6,8 @@ from controllers.base.magento.drivers.magento import MagentoDriver
 from controllers.api.community.orders.controllers.cm_orders_post import CmB2COrdersPost
 from controllers.api.community.orders.controllers.cm_orders_process import CmB2COrdersProcess
 from controllers.api.community.products.controllers.community_products_upload import communityProductsUpload as communityProducts
+from controllers.api.community.points.controllers.cm_points_post import CmB2CPointsPost
+from controllers.api.community.points.controllers.cm_points_process import CmB2CPointsProcess
 
 sync_object_dict = {
     "b2c_orders_post": {
@@ -17,6 +19,13 @@ sync_object_dict = {
     },
     "products_community_upload": {
         "sync_object": communityProducts
+    },
+    "b2c_points_post": {
+        "sync_object": CmB2CPointsPost
+    },
+    "b2c_points_process": {
+        "sync_object": CmB2CPointsProcess,
+        "driver": MagentoDriver
     }
 }
 

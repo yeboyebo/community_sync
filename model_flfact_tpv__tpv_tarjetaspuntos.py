@@ -20,6 +20,10 @@ class community_sync_tpv_tarjetaspuntos(interna_tpv_tarjetaspuntos, helpers.Mixi
     class Meta:
         proxy = True
 
+    @helpers.decoradores.csr()
+    def consultapuntos(params):
+        return form.iface.consultapuntos(params)
+
 
 # @class_declaration tpv_tarjetaspuntos #
 class tpv_tarjetaspuntos(community_sync_tpv_tarjetaspuntos, helpers.MixinConAcciones):
