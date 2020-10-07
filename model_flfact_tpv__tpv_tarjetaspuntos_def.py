@@ -33,7 +33,7 @@ class community_sync(interna):
                     return {"Error": "No se ha encontrado la tarjeta.", "status": 1}
 
                 saldopuntos = qsatype.FLUtil.sqlSelect(u"tpv_tarjetaspuntos", u"saldopuntos", ustr(u"email = '", email, u"'"))
-                return {"saldoPuntos": saldopuntos, "email": email}
+                return {"saldoPuntos": saldopuntos, "email": email, "codtarjetapuntos": existe_tarjeta}
             else:
                 return {"Error": "Petición Incorrecta", "status": -1}
         except Exception as e:

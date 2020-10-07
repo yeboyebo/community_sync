@@ -20,7 +20,7 @@ class community_sync_process(interna_process):
     def start(pk, data):
         result = None
         status = None
-
+        print("PROCESS")
         if "passwd" in data and data["passwd"] == syncppal.iface.get_param_sincro('apipass')['auth']:
             response = task_manager.task_executer("b2c_points_process", data)
             if response:

@@ -20,6 +20,7 @@ class community_sync_post(interna_post):
     def start(pk, data):
         result = None
         status = None
+        print("POST")
         if "passwd" in data and data["passwd"] == syncppal.iface.get_param_sincro('apipass')['auth']:
             response = task_manager.task_executer("b2c_points_post", data)
             if response:
