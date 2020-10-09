@@ -7,53 +7,53 @@ from controllers.api.community.refounds.serializers.cm_refound_line_serializer i
 class CmRefoundVoucherLineSerializer(CmRefoundLineSerializer):
 
     def get_data(self):
-        print("1")
+
         if str(self.init_data["vale_description"]) == "None" or str(self.init_data["vale_total"]) == "None":
             return False
-        print("2")
+
         iva = self.init_data["tax_refunded"]
         if not iva or iva == "":
             iva = 0
-        print("3")
+
         self.set_string_value("codtienda", "AWEB")
-        print("4")
+
         self.set_string_value("referencia", self.get_referencia(), max_characters=18)
         self.set_string_value("descripcion", "DESCUENTO VALE: " + self.get_descripcion(), max_characters=100)
         self.set_string_value("barcode", self.get_barcode(), max_characters=20)
         self.set_string_value("talla", self.get_talla(), max_characters=50)
         self.set_string_value("color", self.get_color(), max_characters=50)
         self.set_string_value("codimpuesto", self.get_codimpuesto(iva), max_characters=10)
-        print("5")
+
         self.set_string_relation("codcomanda", "codcomanda", max_characters=12)
-        print("6")
+
         self.set_data_value("cantdevuelta", 0)
         self.set_data_value("cantidad", self.get_cantidad())
-        print("7")
+
         self.set_data_value("ivaincluido", True)
         self.set_data_relation("iva", "tax_refunded")
-        print("8")
+
         pvpUnitario = parseFloat(self.init_data["vale_total"]) / ((100 + iva) / 100)
         pvpSinDto = pvpUnitario
         pvpTotal = pvpSinDto
         pvpUnitarioIva = parseFloat(self.init_data["vale_total"])
         pvpSinDtoIva = pvpUnitarioIva
         pvpTotalIva = pvpUnitarioIva
-        print("9")
+
         if self.init_data["tipo_linea"] == "ValesNegativos":
             pvpSinDto = pvpSinDto * (-1)
             pvpTotal = pvpTotal * (-1)
             pvpSinDtoIva = pvpUnitarioIva * (-1)
             pvpTotalIva = pvpUnitarioIva * (-1)
-        print("10")
+
         self.set_data_value("pvpunitario", pvpUnitario)
         self.set_data_value("pvpsindto", pvpSinDto)
         self.set_data_value("pvptotal", pvpTotal)
         self.set_data_value("pvpunitarioiva", pvpUnitarioIva)
         self.set_data_value("pvpsindtoiva", pvpSinDtoIva)
         self.set_data_value("pvptotaliva", pvpTotalIva)
-        print("11")
+
         self.crear_registro_movvale()
-        print("12")
+
         return True
 
     def get_referencia(self):
