@@ -221,6 +221,134 @@
             {
                 "path": "models/flfactppal/",
                 "name": "model_flfactppal__eg_logtarjetasweb_def.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/",
+                "name": "ctrl_api_community_refounds__post.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/controllers/",
+                "name": "ctrl_api_community_refounds__cm_refounds_post.py"
+            },
+            {
+                "path": "models/flfact_tpv/objects/",
+                "name": "model_flfact_tpv__eg_logdevolucionesweb_raw.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_log_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/",
+                "name": "ctrl_api_community_refounds__process.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/controllers/",
+                "name": "ctrl_api_community_refounds__cm_refounds_process.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_refound_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_idlecommercedevoluciones_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_refound_voucherline_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_refound_payment_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_idlecommerce_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_refound_discountline_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_refound_expensesline_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_refound_line_serializer.py"
+            },
+            {
+                "path": "controllers/api/community/refounds/serializers/",
+                "name": "ctrl_api_community_refounds__cm_refound_pointline_serializer.py"
+            },
+            {
+                "path": "models/flfact_tpv/objects/",
+                "name": "model_flfact_tpv__cm_refound_raw.py"
+            },
+            {
+                "path": "models/flfact_tpv/objects/",
+                "name": "model_flfact_tpv__cm_refound_line_raw.py"
+            },
+            {
+                "path": "models/flfact_tpv/objects/",
+                "name": "model_flfact_tpv__cm_refound_payment_raw.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__eg_logdevolucionesweb.py"
+            },
+            {
+                "path": "models/flfactppal/",
+                "name": "model_flfactppal__eg_logdevolucionesweb_def.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_devolucionestienda.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_devolucionestienda_def.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_motivosdevolucion.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_motivosdevolucion_def.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__idl_ecommercedevoluciones.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__idl_ecommercedevoluciones_def.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_lineasecommerceexcluidas.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_lineasecommerceexcluidas_def.py"
+            },
+            {
+                "path": "models/flfactalma/",
+                "name": "model_flfactalma__eg_sincrostockweb.py"
+            },
+            {
+                "path": "models/flfactalma/",
+                "name": "model_flfactalma__eg_sincrostockweb_def.py"
+            },
+            {
+                "path": "models/flfactalma/",
+                "name": "model_flfactalma__mg_customers.py"
+            },
+            {
+                "path": "models/flfactalma/",
+                "name": "model_flfactalma__mg_customers_def.py"
             }
         ],
         "patchJson": [

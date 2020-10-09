@@ -32,9 +32,53 @@
         },
         {
             "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_tarjetaspuntos",
+            "value": {
+                "eg_devolucionestienda": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/eg_devolucionestienda",
+            "value": {
+                "eg_motivosdevolucion": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/eg_motivosdevolucion",
+            "value": {
+                "idl_ecommercedevoluciones": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/idl_ecommercedevoluciones",
+            "value": {
+                "eg_lineasecommerceexcluidas": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
             "path": "/flfactalma/stocks",
             "value": {
                 "movistock": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfactalma/movistock",
+            "value": {
+                "mg_importexport": {
+                    "form": "mg_importexport"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfactalma/mg_importexport",
+            "value": {
+                "eg_sincrostockweb": null
             }
         },
         {
@@ -49,6 +93,13 @@
             "path": "/flfactppal/eg_logpedidosweb",
             "value": {
                 "eg_logtarjetasweb": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfactppal/eg_logtarjetasweb",
+            "value": {
+                "eg_logdevolucionesweb": null
             }
         }
     ]

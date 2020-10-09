@@ -8,6 +8,8 @@ from controllers.api.community.orders.controllers.cm_orders_process import CmB2C
 from controllers.api.community.products.controllers.community_products_upload import communityProductsUpload as communityProducts
 from controllers.api.community.points.controllers.cm_points_post import CmB2CPointsPost
 from controllers.api.community.points.controllers.cm_points_process import CmB2CPointsProcess
+from controllers.api.community.refounds.controllers.cm_refounds_post import CmB2CRefoundsPost
+from controllers.api.community.refounds.controllers.cm_refounds_process import CmB2CRefoundsProcess
 
 sync_object_dict = {
     "b2c_orders_post": {
@@ -25,6 +27,13 @@ sync_object_dict = {
     },
     "b2c_points_process": {
         "sync_object": CmB2CPointsProcess,
+        "driver": MagentoDriver
+    },
+    "b2c_refounds_post": {
+        "sync_object": CmB2CRefoundsPost
+    },
+    "b2c_refounds_process": {
+        "sync_object": CmB2CRefoundsProcess,
         "driver": MagentoDriver
     }
 }
