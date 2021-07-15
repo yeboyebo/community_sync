@@ -60,34 +60,6 @@
         },
         {
             "type": "insertAfterNode",
-            "path": "/flfact_tpv/eg_lineasecommerceexcluidas",
-            "value": {
-                "eg_logpedidosweb": null
-            }
-        },
-        {
-            "type": "insertAfterNode",
-            "path": "/flfact_tpv/eg_logpedidosweb",
-            "value": {
-                "eg_cupones": null
-            }
-        },
-        {
-            "type": "insertAfterNode",
-            "path": "/flfact_tpv/eg_cupones",
-            "value": {
-                "eg_logtarjetasweb": null
-            }
-        },
-        {
-            "type": "insertAfterNode",
-            "path": "/flfact_tpv/eg_logtarjetasweb",
-            "value": {
-                "eg_logdevolucionesweb": null
-            }
-        },
-        {
-            "type": "insertAfterNode",
             "path": "/flfactalma/stocks",
             "value": {
                 "movistock": null
