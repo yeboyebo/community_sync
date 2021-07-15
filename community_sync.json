@@ -349,6 +349,30 @@
             {
                 "path": "models/flfactalma/",
                 "name": "model_flfactalma__mg_customers_def.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_cupones.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_cupones_def.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_logtarjetasweb.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_logtarjetasweb_def.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_logdevolucionesweb.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__eg_logdevolucionesweb_def.py"
             }
         ],
         "patchJson": [
@@ -374,6 +398,22 @@
             {
                 "name": "model_flfact_tpv__ordersb2b_raw.py",
                 "path": "models/flfact_tpv/objects/"
+            },
+            {
+                "path": "models/flfactalma/",
+                "name": "model_flfactalma__almacenes.py"
+            },
+            {
+                "path": "models/flfactalma/",
+                "name": "model_flfactalma__almacenes_def.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__tpv_comandas.py"
+            },
+            {
+                "path": "models/flfact_tpv/",
+                "name": "model_flfact_tpv__tpv_comandas_def.py"
             }
         ],
         "replaceFile": [
